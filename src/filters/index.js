@@ -9,7 +9,6 @@ export const getNewDate = (value) => {
     var date = new Date(Number(num));
     return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
   }
-
 };
 //获取状态
 export const getStatus = (value) => {

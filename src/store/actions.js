@@ -6,7 +6,7 @@ export default {
     //获取代理商信息
   initAgentsInfo({commit},data){
     return new Promise((relove, reject) => {
-      axios.post('http://hly.lxs.1000da.com.cn/ProxyInfo/Select', JSON.stringify(data), {
+      axios.post('http://tuniu.1000da.com.cn/ProxyInfo/Select', JSON.stringify(data), {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -38,7 +38,7 @@ export default {
   //代理商个人收益
   initAdminPersonalBenefits({commit},data){
     return new Promise((relove, reject) => {
-      axios.post('http://hly.lxs.1000da.com.cn/ProxyInfo/ProxyInfoIncome', JSON.stringify(data), {
+      axios.post('http://tuniu.1000da.com.cn/ProxyInfo/ProxyInfoIncome', JSON.stringify(data), {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
