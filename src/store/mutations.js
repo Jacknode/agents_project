@@ -11,6 +11,10 @@ const state = {
   },
   agentsInfoList:[],//代理商信息
   adminPersonalBenefitsList:[],//代理商个人收益
+  updateAdminAgentsInfoObj:{},//修改代理商信息Obj
+  provinceDataList:[],//获取省
+  cityDataList:[],//获取市
+  countyDataList:[],//获取县
 };
 
 const mutations = {
@@ -32,7 +36,28 @@ const mutations = {
   },
   initAdminPersonalBenefits(state,data){
     state.adminPersonalBenefitsList = data;
-  }
+  },
+  updateAdminAgentsInfoObj(state,id){
+    state.updateAdminAgentsInfoObj = state.agentsInfoList.filter(item=>{
+      if( item.sm_pi_ProxyInfoID == id ){
+        return true;
+      }else{
+        return false;
+      }
+    })[0];
+  },
+  //获取省
+  initProvinceData(state,data){
+    state.provinceDataList = data;
+  },
+  //获取市
+  initCityData(state,data){
+    state.cityDataList = data;
+  },
+  //获取县
+  initCountyData(state,data){
+    state.countyDataList = data;
+  },
 };
 
 export default {

@@ -58,7 +58,7 @@
               "proxyID": this.ruleForm2.account,
               "password": this.ruleForm2.checkPass,
             };
-            this.$http.post('http://tuniu.1000da.com.cn/ProxyInfo/Login',JSON.stringify(loginParams),{
+            this.$http.post('http://webservice.1000da.com.cn/ProxyInfo/Login',JSON.stringify(loginParams),{
               headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
               }
